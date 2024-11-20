@@ -9,6 +9,7 @@ namespace Tyuiu.TodikovDE.Sprint5.Task0.V9.Test
         [TestMethod]
         public void TestMethod1()
         {
+            string path = $@"C:Users"
         }
     }
 }
