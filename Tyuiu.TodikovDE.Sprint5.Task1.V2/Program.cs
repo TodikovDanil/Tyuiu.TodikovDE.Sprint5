@@ -9,8 +9,8 @@ namespace Tyuiu.TodikovDE.Sprint5.Task1.V2
             Console.WriteLine("**************************************************************************");
             Console.WriteLine("* Спритн #5                                                              *");
             Console.WriteLine("* Тема: Создания итогого решения по спринту                              *");
-            Console.WriteLine("* Задание #0                                                             *");
-            Console.WriteLine("* Вариант #9                                                             *");
+            Console.WriteLine("* Задание #1                                                             *");
+            Console.WriteLine("* Вариант #2                                                             *");
             Console.WriteLine("* Выполнил: Тодиков Даниил Эдуардович | ИСТНб-24-1                       *");
             Console.WriteLine("**************************************************************************");
             Console.WriteLine("*                                                                        *");
