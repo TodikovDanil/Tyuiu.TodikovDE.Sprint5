@@ -9,7 +9,11 @@ namespace Tyuiu.TodikovDE.Sprint5.Task0.V9.Test
         [TestMethod]
         public void TestMethod1()
         {
-            string path = $@"C:Users"
+            string path = $@"C:C:\Users\User\source\repos\Tyuiu.TodikovDE.Sprint5\Tyuiu.TodikovDE.Sprint5.Task0.V9\bin\Debug\net8.0\OutputFileTask0.txt";
+            FileInfo fileInfo = new FileInfo(path);
+            bool fileExists = fileInfo.Exists;
+            bool wait = true;
+            Assert.AreEqual(wait, fileExists);
         }
     }
 }
