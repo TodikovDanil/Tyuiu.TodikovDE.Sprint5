@@ -18,7 +18,7 @@ namespace Tyuiu.TodikovDE.Sprint5.Task1.V2.Lib
             string strY;
             for (int x = startValue; x <= stopValue; x++)
             {
-                y = Math.Round(((2 * x - 3) / Math.Cos(x) - 2 * x) + 5 * x - 6);
+                y = Math.Round(((2 * x - 3) / Math.Cos(x) - 2 * x) + 5 * x - 6,2);
                 strY = Convert.ToString(y);
                 if (x != stopValue)
                 {
