@@ -14,11 +14,11 @@ namespace Tyuiu.TodikovDE.Sprint5.Task5.V4.Lib
             {
                 chisla[i] = chisla[i].Replace(".", ",");
 
-                double temp = Math.Round(Convert.ToDouble(chisla[i]), 3);
-                if (temp % 1 == 0) mult *= temp;
+                double temp = Convert.ToDouble(chisla[i]);
+                if (temp % 1 != 0) mult *= temp;
             }
 
-            return mult;
+            return Math.Round(mult,3);
         }
     }
 }
