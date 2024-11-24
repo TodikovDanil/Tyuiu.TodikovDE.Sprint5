@@ -1,5 +1,5 @@
-﻿using Tyuiu.TodikovDE.Sprint5.Task3.V2.Lib;
-namespace Tyuiu.TodikovDE.Sprint5.Task3.V2
+﻿using Tyuiu.TodikovDE.Sprint5.Task3.V21.Lib;
+namespace Tyuiu.TodikovDE.Sprint5.Task3.V21
 {
     internal class Program
     {
@@ -10,7 +10,7 @@ namespace Tyuiu.TodikovDE.Sprint5.Task3.V2
             Console.WriteLine("* Спритн #5                                                              *");
             Console.WriteLine("* Тема: Создания итогого решения по спринту                              *");
             Console.WriteLine("* Задание #3                                                             *");
-            Console.WriteLine("* Вариант #2                                                             *");
+            Console.WriteLine("* Вариант #21                                                            *");
             Console.WriteLine("* Выполнил: Тодиков Даниил Эдуардович | ИСТНб-24-1                       *");
             Console.WriteLine("**************************************************************************");
             Console.WriteLine("*                                                                        *");

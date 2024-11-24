@@ -1,4 +1,4 @@
-namespace Tyuiu.TodikovDE.Sprint5.Task3.V2.Test
+namespace Tyuiu.TodikovDE.Sprint5.Task3.V21.Test
 {
     [TestClass]
     public class DataServiceTest
