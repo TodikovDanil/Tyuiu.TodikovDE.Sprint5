@@ -13,7 +13,7 @@ namespace Tyuiu.TodikovDE.Sprint5.Task7.V5.Lib
                 {
                     for (int i = 0; i < L.Length; i++)
                     {
-                        if (L[i] >= 'А' && L[i] <= 'z')
+                        if (L[i] >= 'А' && L[i] <= 'я')
                         {
                             strLine = strLine + L[i];
                         }
