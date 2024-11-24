@@ -13,9 +13,12 @@ namespace Tyuiu.TodikovDE.Sprint5.Task7.V5.Lib
                 {
                     for (int i = 0; i < L.Length; i++)
                     {
-                        if (L[i] >= 'А' && L[i] <= 'я' || L[i] == '!' || L[i] == '.'  || L[i] == ',' || L[i] == ' ')
+                        if (L[i] >= 'А' && L[i] <= 'я')
                         {
-                            strLine = strLine + L[i];
+                            if ((L[i + 1] == ' ') || (L[i + 1] == '.') || (L[i + 1] == ',') || (L[i + 1] == '!'))
+                            {
+                                strLine = strLine + L[i];
+                            }
                         }
                     }
                 }
