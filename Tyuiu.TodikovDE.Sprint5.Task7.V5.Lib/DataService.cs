@@ -1,0 +1,26 @@
+﻿using tyuiu.cources.programming.interfaces.Sprint5;
+namespace Tyuiu.TodikovDE.Sprint5.Task7.V5.Lib
+{
+    public class DataService : ISprint5Task7V5
+    {
+        public string LoadDataAndSave(string path)
+        {
+            string strLine = "";
+            using (StreamReader R = new(path))
+            {
+                string L;
+                while ((L = R.ReadLine()) != null)
+                {
+                    for (int i = 0; i < L.Length; i++)
+                    {
+                        if (L[i] >= 'А' && L[i] <= 'z')
+                        {
+                            strLine = strLine + L[i];
+                        }
+                    }
+                }
+                return strLine;
+            }
+        }
+    }
+}
