@@ -19,7 +19,7 @@ namespace Tyuiu.TodikovDE.Sprint5.Task7.V5.Lib
                         }
                     }
                 }
-                return strLine.Trim(' ');
+                return strLine.Trim('!');
             }
         }
     }
