@@ -1,4 +1,5 @@
-﻿using Tyuiu.TodikovDE.Sprint5.Task7.V5.Lib;
+﻿using System.IO;
+using Tyuiu.TodikovDE.Sprint5.Task7.V5.Lib;
 namespace Tyuiu.TodikovDE.Sprint5.Task7.V5
 {
     internal class Program
@@ -18,16 +19,20 @@ namespace Tyuiu.TodikovDE.Sprint5.Task7.V5
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                       *");
             Console.WriteLine("**************************************************************************");
             DataService ds = new DataService();
-            string path = @"";
-            Console.WriteLine($"Данные находятся в файле: {path}");
+            string path = @"C:\Users\User\source\repos\Tyuiu.TodikovDE.Sprint5\DataSprint5\InPutDataFileTask7V5.txt";
+            string pathSaveFile = @"C:\Users\User\source\repos\Tyuiu.TodikovDE.Sprint5\DataSprint5\InPutDataFileTask7V5.txt";
 
-            Console.WriteLine();
-            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("Данные находятся в файле: " + path);
+
+
+
+            Console.WriteLine(" ***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
+            Console.WriteLine("Находится в файле: ");
+            pathSaveFile = ds.LoadDataAndSave(path);
+            Console.WriteLine(pathSaveFile.Replace("   ",""));
 
-            Console.WriteLine("Находится в файле:");
-            Console.WriteLine(ds.LoadDataAndSave(path));
             Console.ReadKey();
         }
     }

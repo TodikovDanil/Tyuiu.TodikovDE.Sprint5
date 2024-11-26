@@ -8,21 +8,19 @@ namespace Tyuiu.TodikovDE.Sprint5.Task7.V5.Lib
             string strLine = "";
             using (StreamReader R = new(path))
             {
-                string pathSaveFile = Path.Combine(Path.GetTempPath(), "InPutDataFileTask7V5.txt");
-
-                FileInfo fileInfo = new FileInfo(pathSaveFile);
-                bool fileExists = fileInfo.Exists;
-
-                if (fileExists)
+                string L;
+                while ((L = R.ReadLine()) != null)
                 {
-                    File.Delete(pathSaveFile);
+                    for (int i = 0; i < L.Length; i++)
+                    {
+                        if ((L[i] >= 'А' && L[i] <= 'я' || L[i] == '!' || L[i] == '.' || L[i] == ',' ) ^ (L[i] == ' '))
+                        {
+                            strLine += L[i];
+                            
+                        }
+                    }
                 }
-                string fileContent = File.ReadAllText(path);
-
-                string modifiedContent = fileContent.Replace("qwertyuiopasdfghjklzxcvbnm", "");
-
-                File.WriteAllText(pathSaveFile, modifiedContent);
-                return pathSaveFile;
+                return strLine;
             }
         }
     }
