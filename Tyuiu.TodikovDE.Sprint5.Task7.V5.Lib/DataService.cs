@@ -15,7 +15,7 @@ namespace Tyuiu.TodikovDE.Sprint5.Task7.V5.Lib
                     {
                         if (L[i] >= 'A' && L[i] <= 'z')
                         {
-                            strLine = L.Trim(L[i]);
+                            strLine =  strLine + L.Trim(L[i]);
                         }
                     }
                 }
