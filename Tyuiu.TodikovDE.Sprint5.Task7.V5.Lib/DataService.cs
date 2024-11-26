@@ -23,7 +23,7 @@ namespace Tyuiu.TodikovDE.Sprint5.Task7.V5.Lib
                 while ((line = reader.ReadLine()) != null)
                 {
                     outText += Regex.Replace(line, alp, "", RegexOptions.IgnoreCase);
-                    outText = outText.Replace("   ", "");
+                    outText = outText.Replace("    ", "");
                 }
                 File.AppendAllText(pathSaveFile, outText);
                 return pathSaveFile;
