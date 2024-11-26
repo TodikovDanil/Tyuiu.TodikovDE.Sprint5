@@ -1,26 +1,32 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint5;
+﻿using System.Text.RegularExpressions;
+using tyuiu.cources.programming.interfaces.Sprint5;
 namespace Tyuiu.TodikovDE.Sprint5.Task7.V5.Lib
 {
     public class DataService : ISprint5Task7V5
     {
         public string LoadDataAndSave(string path)
         {
-            string strLine = "";
-            using (StreamReader R = new(path))
+            string pathSaveFile = Path.Combine(Path.GetTempPath(), "InPutDataFileTask7V5.txt");
+            string outText = "";
+            string alp = "[a-z]";
+
+            FileInfo fileInfo = new FileInfo(path);
+            bool fileExists = fileInfo.Exists;
+
+            if (fileExists)
             {
-                string L;
-                while ((L = R.ReadLine()) != null)
+                File.Delete(pathSaveFile);
+            }
+            using (StreamReader reader = new StreamReader(path))
+            {
+                string line;
+                while ((line = reader.ReadLine()) != null)
                 {
-                    for (int i = 0; i < L.Length; i++)
-                    {
-                        if ((L[i] >= 'А' && L[i] <= 'я' || L[i] == '!' || L[i] == '.' || L[i] == ',' ) ^ (L[i] == ' '))
-                        {
-                            strLine += L[i];
-                            
-                        }
-                    }
+                    outText += Regex.Replace(line, alp, "", RegexOptions.IgnoreCase);
+                    outText = outText.Replace("   ", "");
                 }
-                return strLine;
+                File.AppendAllText(pathSaveFile, outText);
+                return pathSaveFile;
             }
         }
     }
